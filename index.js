@@ -20,5 +20,9 @@ mongoose.connect(process.env.DB_CONNECT)
 
 app.use('/', TodoItemRoute)
 
+
+app.get('/', (req, res) => {
+    res.send("running server");
+});
 //add port and connect to server
 app.listen(PORT, () => console.log("server connected"));
